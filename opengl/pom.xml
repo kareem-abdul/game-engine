@@ -9,7 +9,6 @@
 
     <groupId>org.dtomics.gameengine.opengl</groupId>
     <artifactId>opengl</artifactId>
-    <packaging>jar</packaging>
 
     <name>opengl</name>
     <url>http://maven.apache.org</url>

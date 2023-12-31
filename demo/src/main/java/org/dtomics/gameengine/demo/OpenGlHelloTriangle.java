@@ -1,4 +1,4 @@
-package org.dtomics.gameengine;
+package org.dtomics.gameengine.demo;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.Version;
@@ -43,15 +43,12 @@ import static org.lwjgl.opengl.GL11.glClear;
 import static org.lwjgl.opengl.GL11.glClearColor;
 import static org.lwjgl.system.MemoryStack.stackPush;
 import static org.lwjgl.system.MemoryUtil.NULL;
-
 /**
- * Hello world!
- *
+ * OpenGlHelloTriangle
  */
-public class App 
-{
-    private long window;
+public class OpenGlHelloTriangle {
 
+    private long window;
 
 
     public void run() {
@@ -148,6 +145,8 @@ public class App
     }
 
     public static void main(String[] args) {
-        new App().run();
+        new OpenGlHelloTriangle().run();
     }
+
+    
 }
