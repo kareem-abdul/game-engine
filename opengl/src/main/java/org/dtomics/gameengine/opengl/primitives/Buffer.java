@@ -1,6 +1,7 @@
 package org.dtomics.gameengine.opengl.primitives;
 
-import static org.lwjgl.opengl.GL15C.*;
+import static org.lwjgl.opengl.GL15C.glBindBuffer;
+import static org.lwjgl.opengl.GL15C.glGenBuffers;
 
 public class Buffer implements Primitive {
 
@@ -16,11 +17,11 @@ public class Buffer implements Primitive {
 
     @Override
     public void bind() {
-
+        glBindBuffer(type, pointer);
     }
 
     @Override
     public void unbind() {
-
+        glBindBuffer(type, 0);
     }
 }
