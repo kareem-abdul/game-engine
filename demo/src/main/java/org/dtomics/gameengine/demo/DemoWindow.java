@@ -165,4 +165,15 @@ public class DemoWindow {
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
         glfwWindowHint(GLFW_RESIZABLE, this.resizable ? GLFW_TRUE : GLFW_FALSE);
     }
+
+    public static void main(String[] args) {
+        final var window = DemoWindow.builder()
+            .width(1280)
+            .height(720)
+            .resizable(true)
+            .title("demo window")
+            .build();
+
+        window.run(() -> System.out.println(window.fps));
+    }
 }
