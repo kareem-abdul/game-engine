@@ -18,7 +18,7 @@ public interface Window extends Listener {
 
     void pollEvents();
 
-    Configuration config();
+    WindowConfig config();
 
-    void config(Configuration configuration);
+    void config(WindowConfig configuration);
 }

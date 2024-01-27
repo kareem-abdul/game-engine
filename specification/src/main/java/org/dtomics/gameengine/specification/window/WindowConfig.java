@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 @Builder
 @Data
 @Accessors(chain = true)
-public class Configuration {
+public class WindowConfig {
     private int width;
     private int height;
     @Builder.Default
