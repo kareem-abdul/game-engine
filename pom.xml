@@ -38,11 +38,37 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>${lombok.version}</version>
-        <optional>true</optional>
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <build>
+    <pluginManagement>
+        <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <minimizeJar>true</minimizeJar>
+                        <artifactSet>
+                            <excludes>
+                                <exclude>org.projectlombok:lombok:*</exclude>
+                            </excludes>
+                        </artifactSet>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>shade</goal>
+                            </goals>
+                        </execution>
+
+                    </executions>
+                </plugin>
+        </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
